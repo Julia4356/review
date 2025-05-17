@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="registration-form p-10">
+    <form class="flex flex-col w-1/2 bg-blue-400 p-4 mx-auto" method="POST" action="/register">
+        <h2 class="text-3xl font-bold">Register</h2>
+        <label for="username">Username:</label>
+        <input class="mb-4" type="text" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        
+        <button type="submit" class="bg-blue-200 p-1 rounded-lg w-28 block mx-auto">Register</button>
+    </form>
+    <p>{{ msg }}</p>
+</section>
+{% endblock %}
